@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'minitest/pride'
+
 
 class VoteTest < ActiveSupport::TestCase
   def test_vote_must_have_voter_id

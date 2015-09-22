@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'minitest/pride'
 
 class CandidateTest < ActiveSupport::TestCase
   def test_candidates_must_have_names
