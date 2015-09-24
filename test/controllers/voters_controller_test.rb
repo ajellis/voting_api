@@ -8,7 +8,6 @@ class VotersControllerTest < ActionController::TestCase
 
   test "voter has access token" do
    voter = Voter.create(name: "Bill Nye", party: "Scientist")
-   puts voter.inspect
    assert voter.access_token
  end
 

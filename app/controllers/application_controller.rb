@@ -5,9 +5,8 @@ class ApplicationController < ActionController::Base
 
   def token_verification
     voter = Voter.find_by(access_token: params[:access_token])
-      render json: Voter.all.to_json
     unless voter
-      render json: "FAILURE!!! ACCESS DENIED SCRUB!!""
+      render json: "FAILURE!!! ACCESS DENIED SCRUB!!"
     end
   end
 end
