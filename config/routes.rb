@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
-  get 'voters/show'
+  post 'voters/show'
+  post 'voters/update'
   get 'voters/index'
-  post 'voters/create'
 
-  get 'candidates/update'
+
   get 'candidates/index'
-  get 'candidates/show'
+  post 'candidates/show'
 
   get 'votes/index'
   post 'votes/create'
+  post 'votes/destroy'
 
-  get 'voters/index'
 
 
 
