@@ -12,11 +12,17 @@ class VotersController < ApplicationController
 
   def update
     voter = Voter.find(params[:id])
-     if voter.update(name: params[:name], party: params[:party])
+     if voter.update(voter_params)
        render json: voter
      else
        render json: "That ain't right. "
      end
    end
+
+  private
+
+  def voter_params
+    params.require(:voter).permit(:name, :party)
+  end
 
 end
